@@ -37,5 +37,5 @@ document.addEventListener("scroll", (e) => {
 window.addEventListener("load", () => {
     setTimeout(() => {
         document.querySelector(".loader-page").style.display = "none";
-    }, 60 / 100);
+    }, 1000);
 });

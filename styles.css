@@ -7,10 +7,11 @@
 body{
     color: rgb(49, 32, 32);
     height: 2000px;
+    font-size: 90%;
     overflow-x: hidden;
-    font-family: 'Mulish', sans-serif;
-    /* font-family: 'Inter', sans-serif; */
-    font-family: 'Ubuntu', sans-serif;
+    /* font-family: 'Mulish', sans-serif; */
+    font-family: 'Inter', sans-serif;
+    /* font-family: 'Ubuntu', sans-serif; */
 }
 
 ul{
@@ -206,8 +207,11 @@ img{
     font-weight: 700;
 }
 .products-wrapper-header .btn{
-    background-color: #eceded;
+    background-color: rgba(255, 255, 255, 0.603);
     margin-left: 10px;
+}
+.offer-wrap-left .btn{
+    background-color: rgb(255 255 255);
 }
 .products-wrapper-header .svg-icon{
     width: 20px;
@@ -278,7 +282,7 @@ img{
     overflow: auto;
 }
 .products-wrapper .add-btn{
-    background-color: tomato;
+    background-color: #477bff;
     font-weight: 700;
     display: block;
     width: 100%;
@@ -310,8 +314,14 @@ footer .top-footer img{
         width: 100%;
     }
     .products-wrapper .product{
-        width: 225px;
+        width: 235px;
     }
+
+    .products-wrapper .product{
+        height: auto;
+        overflow: auto;
+    }
+
 
 }
 

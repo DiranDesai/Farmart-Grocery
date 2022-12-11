@@ -4,6 +4,16 @@ const decreasingBtn = document.querySelector(".decrease-btn");
 
 const headerBottomMenu = document.querySelector(".header-bottom");
 
+const menuNavigationMobile = document.querySelector(".menu-navigation-mobile");
+const humbgerMenuButton = document.querySelector(".humbger-menu");
+const closeHumbgerMenuButton = document.querySelector(".menu-navigation-mobile .close");
+
+
+const searchMobileContainer = document.querySelector(".search-mobile-container");
+const searchMobileContainerOpenButton = document.querySelector(".header-middle .icon-wrapper");
+const searchMobileContainerCloseButton = document.querySelector(".search-mobile-container .close");
+
+
 let productsPos = 0;
 
 function handleProducts(e, status) {
@@ -22,7 +32,30 @@ function handleProducts(e, status) {
 increasingBtn.addEventListener("click", (e) => handleProducts(e, true));
 decreasingBtn.addEventListener("click", (e) => handleProducts(e, false));
 
+humbgerMenuButton.addEventListener("click", handleHumbger);
+closeHumbgerMenuButton.addEventListener("click", handleHumbger);
 
+searchMobileContainerOpenButton.addEventListener("click", handleSearchContainerMobile);
+searchMobileContainerCloseButton.addEventListener("click", handleSearchContainerMobile);
+
+
+
+
+function handleHumbger() {
+    if (menuNavigationMobile.classList.contains("active")) {
+        menuNavigationMobile.classList.remove("active");
+    } else {
+        menuNavigationMobile.classList.add("active");
+    }
+}
+
+function handleSearchContainerMobile() {
+    if (searchMobileContainer.classList.contains("active")) {
+        searchMobileContainer.classList.remove("active");
+    } else {
+        searchMobileContainer.classList.add("active");
+    }
+}
 
 document.addEventListener("scroll", (e) => {
     const scrollTop = window.scrollY;

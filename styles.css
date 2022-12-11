@@ -14,7 +14,7 @@ body{
     overflow-x: hidden;
     padding: 0 10px;
     /* font-family: 'Mulish', sans-serif; */
-    font-family: 'Inter', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
     /* font-family: 'Ubuntu', sans-serif; */
     /* font-family: 'Open Sans', sans-serif; */
 }
@@ -41,6 +41,15 @@ img{
     padding: 0 15px;
     width: 100%;
 }
+.color-1{
+    background-color: #ff8c46 !important;
+}
+.color-2{
+    background-color: #ec2434 !important;
+}
+.color-3{
+    background-color: #00c9a7 !important;
+}
 
 .btn:focus{
     box-shadow: none;
@@ -52,6 +61,59 @@ img{
 
 li.li-has-children{
     position: relative;
+}
+
+.menu-navigation-mobile, .search-mobile-container{
+    max-width: 400px;
+    width: 82%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+    transition: all 0.6s ease-in-out;
+}
+
+.search-mobile-container{
+    right: 0;
+    transform: translateX(400px);
+}
+.search-mobile-container .top-container{
+    padding: 2rem 10px;
+    background-color: #aec6ea;
+}
+.search-mobile-container.active{
+    transform: translateX(0px);
+}
+
+
+
+
+.menu-navigation-mobile{
+    left: 0;
+    overflow-y: scroll;
+    transform: translateX(-400px);
+}
+
+.menu-navigation-mobile.active{
+    transform: translateX(0px);
+}
+.menu-navigation-mobile .header{
+    background-color: #7968d6;
+    padding: 20px 10px;
+}
+.menu-navigation-mobile .header h5{
+    text-transform: uppercase;
+}
+.menu-navigation-mobile ul li{
+    border-bottom: 1px solid #57585833;
+}
+
+.menu-navigation-mobile ul li a{
+    display: block !important;
+    height: 100%;
+    width: 100%;
+    padding: 20px 15px;
 }
 
 .loader-page{
@@ -247,6 +309,9 @@ li.li-has-children{
 .header-middle .contact{
     display: none;
 }
+.header-middle .contact h4{
+    font-weight: 700;
+}
 .header-middle .actions-buttons{
     display: none;
 }
@@ -318,7 +383,9 @@ li.li-has-children{
     object-fit: cover;
     border-radius: 10px;
 }
-
+.products-wrapper .container-xxxl{
+    overflow: hidden;
+}
 .products-wrapper{
     margin-top: 4rem;
 }
@@ -351,29 +418,40 @@ li.li-has-children{
     border-right: none;
     padding: 10px 20px;
     line-height: 30px;
-    height: 400px;
+    height: 429px;
     overflow: hidden;
     transition: all 0.6s ease-in-out;
 }
-
+.products-wrapper .product .progress{
+    height: 0.5rem;
+    border-radius: 0 !important;
+    margin: 10px 0;
+}
+.products-wrapper .product .progress-bar{
+    background-color: #7968d6;
+}
 .products-wrapper .product:last-child{
     border-right: 1px solid rgb(0 0 0 / 15%);
 }
 .products-wrapper .product .name{
     font-weight: 700;
     display: block;
+    font-size: 13px;
+    color: #000e4c;
 }
 .products-wrapper .product .title{
-    color: #0d6efd;
+    color: rgb(38 72 129 / 75%);
+    font-size: 13px;
 }
 .products-wrapper .product .discount-tag{
     display: inline-block;
     background-color: orange;
-    padding: 3px 7px;
+    padding: 2px 4px;
     border-radius: 4px;
     line-height: 20px;
     font-weight: 700;
     color: white;
+    font-size: 12px;
 }
 .products-wrapper .ratting{
     margin-top: 10px;
@@ -386,16 +464,19 @@ li.li-has-children{
     color: #6495ed;
 }
 .products-wrapper .now{
-    font-weight: 700;
-    color: red;
+    font-weight: 900;
+    color: #f83232;
 }
 .products-wrapper .was{
     font-weight: 700;
     text-decoration: line-through;
 }
 .products-wrapper h5{
-    font-size: 15px;
+    font-size: 14px;
+    color: #33373e;
+    font-weight: 300;
 }
+
 /* .products-wrapper .add-to-cart{
     display: none;
 } */
@@ -404,11 +485,17 @@ li.li-has-children{
     overflow: auto;
 }
 .products-wrapper .add-btn{
-    background-color: #477bff;
+    background-color: rgb(73 82 106);
     font-weight: 700;
     display: block;
     width: 100%;
     color: white;
+    font-size: 14px;
+    border-radius: 3px;
+}
+.products-wrapper .add-btn .svg-icon{
+    width: 20px;
+    height: 20px;
 }
 .products-wrapper .add-btn .svg-icon path{
     fill: white;
@@ -444,9 +531,12 @@ footer .top-footer img{
         overflow: auto;
     }
 
+    .banner .banner-right{
+        margin-top: 2rem;
+    }
+
 
 }
-
 
 
 @media(min-width: 990px) {
@@ -454,7 +544,6 @@ footer .top-footer img{
         display: block;
     }
 }
-
 
 @media(min-width: 1200px) {
     .header-middle .search-container, .header-middle .contact, .header-middle .actions-buttons{

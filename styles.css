@@ -4,14 +4,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&family=Ubuntu:wght@300;400;500;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@900&display=swap');
+
 body{
     color: rgb(49, 32, 32);
     height: 2000px;
-    font-size: 90%;
+    font-size: 14px;
+    font-weight: 400;
     overflow-x: hidden;
+    padding: 0 10px;
     /* font-family: 'Mulish', sans-serif; */
-    font-family: 'Inter', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
     /* font-family: 'Ubuntu', sans-serif; */
+    /* font-family: 'Open Sans', sans-serif; */
 }
 
 ul{
@@ -30,12 +35,70 @@ img{
     object-fit: contain;
 }
 
+.container-xxxl{
+    margin: 0 auto;
+    max-width: 1650px;
+    padding: 0 15px;
+    width: 100%;
+}
+
 .btn:focus{
     box-shadow: none;
 }
 .form-control:focus{
     border: 1px solid #ccc !important;
     box-shadow: none;
+}
+
+li.li-has-children{
+    position: relative;
+}
+
+.menu .sub-menu{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    left: 0;
+    min-width: 240px;
+    opacity: 0;
+    padding: 10px 0;
+    position: absolute;
+    top: 100%;
+    transition: all .4s ease;
+    visibility: hidden;
+    z-index: 1000;
+}
+.menu .sub-menu::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 20px;
+    top: -20px;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent rgb(167 183 186 / 51%) transparent;
+}
+.menu .sub-menu li a{
+    color: rgb(37, 35, 35);
+    display: inline-block;
+    font-size: 14px;
+    padding: 6px 20px;
+    text-transform: capitalize;
+    transition: all .8s cubic-bezier(.19,1,.22,1);
+    width: 100%;
+}
+.menu .sub-menu li{
+    margin-left: 0px !important;
+}
+.menu .svg-icon{
+    width: 20px;
+    height: 20px;
+}
+
+.menu li:hover .sub-menu{
+    opacity: 1;
+    visibility: visible;
 }
 
 
@@ -53,6 +116,32 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.header-bottom.header-bottom-sticky{
+    box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+    padding: 10px 0;
+}
+
+.header-bottom-sticky{
+    animation: fadeInDown .6s both;
+    border-bottom: none;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+
+@keyframes fadeInDown {
+    0%{
+        transform: translateY(-200px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
 }
 
 

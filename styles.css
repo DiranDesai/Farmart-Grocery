@@ -301,6 +301,15 @@ footer .top-footer img{
 
 
 
+@media(max-width: 778px) {
+    .offer-wrap-left{
+        flex-direction: column;
+    }
+    .offer-wrap-left .btn{
+        display: block;
+        width: 100%;
+    }
+}
 
 
 

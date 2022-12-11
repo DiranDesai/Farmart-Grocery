@@ -33,3 +33,9 @@ document.addEventListener("scroll", (e) => {
         headerBottomMenu.classList.remove("header-bottom-sticky");
     }
 });
+
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        document.querySelector(".loader-page").style.display = "none";
+    }, 60 / 100);
+});

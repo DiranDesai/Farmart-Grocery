@@ -309,6 +309,10 @@ footer .top-footer img{
         display: block;
         width: 100%;
     }
+    .products-wrapper .product{
+        width: 225px;
+    }
+
 }
 
 
